@@ -1,0 +1,12 @@
+from django.http import HttpResponse
+from django.shortcuts import render
+
+# Create your views here.
+
+def index(request):
+    return render(request,'index.html')
+
+
+def hi(request):
+    name=request.GET['name']
+    return render(request,'home.html',{'name':name})
